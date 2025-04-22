@@ -1,0 +1,12 @@
+body {
+    font-family: sans-serif;
+    padding: 1rem;
+    background: #f4f4f4;
+  }
+  
+  input, textarea, button {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+  

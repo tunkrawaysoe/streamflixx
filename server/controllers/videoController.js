@@ -14,7 +14,7 @@ export const uploadVideo = async (req,res) => {
       title,
       description,
       filename: req.file.filename,
-      uploader: req.user.id,
+      // uploader: req.user.id,
     });
 
     res.status(201).json(video);
@@ -26,7 +26,7 @@ export const uploadVideo = async (req,res) => {
 
 
 export const getAllVideos = async (req,res) => {
-    const videos = await Video.find().sort({ uploadedAt: -1 }).populate('uploader', 'username');
+    const videos = await Video.find().sort({ uploadedAt: -1 })
     res.json(videos);
     
 }
