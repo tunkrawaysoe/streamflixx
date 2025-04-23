@@ -1,12 +1,20 @@
 import React from 'react';
-import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import UploadPage from './pages/UploadPage';
+import Home from './pages/Home'
 
 function App() {
   return (
-    <div className="app">
-      <h1>🎬 Video Streaming App</h1>
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/upload' element={<UploadPage />} />
+      </Routes>
+    </Router>
   );
 }
 

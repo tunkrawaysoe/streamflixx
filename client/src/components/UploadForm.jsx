@@ -16,7 +16,7 @@ const UploadForm = ({ onUpload }) => {
     formData.append('description', description);
 
     try {
-      const token = 'your-token'; // Replace with real auth
+      const token = 'your-token'; 
       const uploaded = await uploadVideo(formData, token);
       onUpload(uploaded);
       setTitle('');
